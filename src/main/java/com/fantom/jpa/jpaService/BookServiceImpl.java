@@ -11,6 +11,6 @@ import java.util.List;
  */
 public interface BookServiceImpl {
 
-  Page<Book> getAllBook(int start,int count);
+  Page<Book> pageAllBookSortByName(int start,int count);
 
 }

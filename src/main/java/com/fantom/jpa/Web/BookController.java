@@ -22,10 +22,10 @@ public class BookController {
   @Autowired
   private BookServiceImpl bookService;
 
-  @PostMapping("/all")
-  public Page<Book> getAllBook(
+  @PostMapping("/pageAllSortByName")
+  public Page<Book> pageAllSortByName(
           @RequestParam int start,
           @RequestParam int count){
-    return bookService.getAllBook(start,count);
+    return bookService.pageAllBookSortByName(start,count);
   }
 }

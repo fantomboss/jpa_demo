@@ -2,9 +2,7 @@ package com.fantom.jpa.Entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * @author fantomboss
@@ -21,4 +19,7 @@ public class Lover {
   private String name;
   private String sex;
   private String age;
+
+  @OneToOne(mappedBy = "lover",fetch = FetchType.EAGER)
+  private User user;
 }

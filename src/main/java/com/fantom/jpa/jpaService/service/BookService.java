@@ -22,7 +22,7 @@ public class BookService implements BookServiceImpl {
   private BookRepository bookRepository;
 
   @Override
-  public Page<Book> getAllBook(int start, int count) {
+  public Page<Book> pageAllBookSortByName(int start, int count) {
     //Sort.Direction.DESC---降序      Sort.Direction.ASC---升序     ，后面是要排序的字段名,属性名
     Sort sort = new Sort(Sort.Direction.ASC,"name");
     Pageable pageable = PageRequest.of(start,count,sort);
