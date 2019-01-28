@@ -5,6 +5,7 @@ import com.fantom.jpa.jpaRepository.LoverRepository;
 import com.fantom.jpa.jpaService.LoverServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,7 +23,7 @@ public class LoverController {
   @Autowired
   private LoverServiceImpl loverService;
 
-  @RequestMapping("/pageAllLoverSortByAge")
+  @PostMapping("/pageAllLoverSortByAge")
   public Page<Lover> pageAllLoverSortByAge(
           @RequestParam int start,
           @RequestParam int count){

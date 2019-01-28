@@ -41,8 +41,6 @@ public class User {
 
   //a、targetEntity属性表示默认关联的实体类型。如果集合类中指定了具体类型了，不需要使用targetEntity.否则要指定targetEntity=AddressEO.class。
   //b、mappedBy属性用于标记当实体之间是双向时使用。指向拥有的一方，自己是被拥有的一方（双向关系必写！！）
-  //  只有OneToOne,OneToMany,ManyToMany上才有mappedBy属性，ManyToOne不存在该属性；
-  //---这里我们设置双向关系，表示两者之间两情相爱，互相维护
   @OneToOne(fetch = FetchType.EAGER,cascade = {CascadeType.ALL},targetEntity = Lover.class)
   @JoinColumn(name = "lover_id")
   private Lover lover;

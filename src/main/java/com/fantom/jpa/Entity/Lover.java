@@ -1,5 +1,6 @@
 package com.fantom.jpa.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -19,7 +20,4 @@ public class Lover {
   private String name;
   private String sex;
   private String age;
-
-  @OneToOne(mappedBy = "lover",fetch = FetchType.EAGER)
-  private User user;
 }
