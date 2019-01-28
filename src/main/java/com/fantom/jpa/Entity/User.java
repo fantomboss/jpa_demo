@@ -50,6 +50,8 @@ public class User {
   private Country country;
 
 
+}
+
   /*
       1、定义时使用接口，初始化使用具体的类。
       如Collection可以初始化为ArrayList或HashSet；
@@ -62,4 +64,3 @@ public class User {
       List集合中的对象可以有重复，并且可以有排序；
       Map集合是带有key和value值的集合。
    */
-}

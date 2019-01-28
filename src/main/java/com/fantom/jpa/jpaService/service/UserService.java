@@ -31,5 +31,4 @@ public class UserService implements UserServiceImpl {
     Pageable pageable = PageRequest.of(start,count);
     return userRepository.findAllByUserId(id,pageable);
   }
-
 }
